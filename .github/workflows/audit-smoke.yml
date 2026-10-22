@@ -1,0 +1,13 @@
+name: audit-smoke
+
+on:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Echo audit marker
+        run: echo "AUDIT-SMOKE-OK compose-upgrade-audit"
